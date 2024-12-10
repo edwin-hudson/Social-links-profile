@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Inter";
-    src: url(/assets/fonts/Inter-VariableFont_slntwght.ttf)
+    src: url(assets/fonts/Inter-VariableFont_slntwght.ttf)
 }
 
 * {
@@ -16,7 +16,6 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -25,7 +24,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 400px;
+    width: 600px;
     height: 800px;
 }
 
@@ -33,10 +32,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(0, 0%, 12%);
+    background: hsl(0, 0%, 12%);
     width: 400px;
     height: 615px;
-    border-radius: 15px; 
+    border-radius: 15px;
+    transition: all ease 0.3s; 
 }
 
 .top{
@@ -72,7 +72,7 @@ body {
 
 .user-location{
     color: hsl(75, 94%, 57%);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 400;
     margin: 10px;
 }
@@ -104,6 +104,7 @@ button {
     border: none;
     font-size: 1rem;
     font-weight: 500;
+    transition: all ease 0.3s;
 }
 
 button:hover{
@@ -115,6 +116,21 @@ button:hover{
 button:active{
     background: hsl(75, 69%, 38%);
     color: hsl(0, 0%, 12%);
-    cursor: pointer;
 }
 
+@media screen and (max-width: 375px) {
+    .card{
+        width: 330px;
+        height: 600px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+
+    button {
+        width: 280px;
+    }
+    
+}
